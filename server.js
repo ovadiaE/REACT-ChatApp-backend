@@ -17,7 +17,7 @@ const server = http.createServer(app);
 
 const io = socket(server, {
   cors: {
-      origin: "http://localhost:3000",
+      origin: "https://lucid-ptolemy-a40286.netlify.app/",
   }
 }); 
 const port = process.env.PORT || 8000
