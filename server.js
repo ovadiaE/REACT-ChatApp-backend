@@ -52,6 +52,7 @@ io.on("connection", (socket) => {
       userId: p_user.id,
       username: p_user.username,
       text: text,
+      time: new Date().getTime(),
     });
   });
 
