@@ -2,10 +2,10 @@
   "name": "react-chatapp-backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "server.js"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -26,5 +26,8 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
+  },
+    "engines": {
+      "node": "v16.13.1"
   }
 }
