@@ -1,11 +1,12 @@
 const express = require("express");
 const http = require("http");
 const cors = require("cors");
-const port = 8000;
+const dotenv = require('dotenv');
 const index = require("./routes/index")
 const socket = require("socket.io")
 const { get_Current_User, user_Disconnect, join_User } = require("./dummyuser");
 
+dotenv.config({path: './config/config.env'});
 
 const app = express();
 
@@ -19,7 +20,7 @@ const io = socket(server, {
       origin: "http://localhost:3000",
   }
 }); 
-
+const port = process.env.PORT || 8000
 server.listen(port, () => console.log(`Listening on port ${port}`));
 
 io.on("connection", (socket) => {
